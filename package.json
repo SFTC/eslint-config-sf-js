@@ -1,0 +1,34 @@
+{
+  "name": "eslint-config-sf-js",
+  "version": "1.0.5",
+  "description": "SF-iTech's ESLint configuration for JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SF-iTech",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mochazzxx/eslint-config-sf-js.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint config",
+    "javascript",
+    "styleguide",
+    "sf"
+  ],
+  "dependencies": {
+    "babel-eslint": ">=9.x",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.17.0"
+  },
+  "engines": {
+    "node": ">= 4"
+  }
+}
