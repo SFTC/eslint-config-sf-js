@@ -23,6 +23,8 @@ module.exports = {
     node: true,
     commonjs: true,
     es6: true,
+    worker: true,
+    jquery: true,
   },
   rules: {
     // 打包时禁用

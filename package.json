@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sf-js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "SF-iTech's ESLint configuration for JavaScript",
   "main": "index.js",
   "scripts": {
