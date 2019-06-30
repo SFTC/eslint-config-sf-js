@@ -14,7 +14,7 @@ If you want to use this ESLint configuration in your project, you can install it
 First, install this package, ESLint and the necessary plugins.
 
 ```sh
-yarn add eslint-config-sf-js
+yarn add eslint-config-sf-js -D
 ```
 
 Then create a file named `.eslintrc` with following contents in the root folder of your project:
