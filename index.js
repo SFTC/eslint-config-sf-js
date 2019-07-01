@@ -1,7 +1,6 @@
 
 module.exports = {
   extends: ['airbnb-base'],
-  root: true,
   parserOptions: {
     parser: 'babel-eslint',
     ecmaVersion: 2019,
@@ -10,8 +9,6 @@ module.exports = {
       globalReturn: false,
       impliedStrict: true,
       jsx: true,
-      experimentalObjectRestSpread: true,
-      legacyDecorators: true,
     },
     // 即使没有 babelrc 配置文件，也使用 babel-eslint 来解析
     requireConfigFile: false,
@@ -23,8 +20,6 @@ module.exports = {
     node: true,
     commonjs: true,
     es6: true,
-    worker: true,
-    jquery: true,
   },
   rules: {
     // 打包时禁用
