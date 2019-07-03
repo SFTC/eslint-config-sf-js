@@ -24,8 +24,8 @@ module.exports = {
   rules: {
     // 打包时禁用
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'no-alert': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-console': process.env.NODE_ENV === 'production' ? 2 : 1,
+    'no-alert': process.env.NODE_ENV === 'production' ? 2 : 1,
 
     // 有时需要循环中重试请求，这种场景下可以使用await
     'no-await-in-loop': 'off',
