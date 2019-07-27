@@ -1,3 +1,4 @@
+const abc = 'xxx';
 
 module.exports = {
   extends: ['airbnb-base'],
@@ -12,8 +13,8 @@ module.exports = {
     },
     // 即使没有 babelrc 配置文件，也使用 babel-eslint 来解析
     requireConfigFile: false,
-    // 仅允许 import export 语句出现在模块的顶层
-    allowImportExportEverywhere: false,
+    // false时仅允许 import export 语句出现在模块的顶层
+    allowImportExportEverywhere: true,
   },
   env: {
     browser: true,
@@ -21,6 +22,12 @@ module.exports = {
     commonjs: true,
     es6: true,
   },
+
+  /**
+   * airbnb-base 规则
+   * https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js
+   */
+
   rules: {
     // 打包时禁用
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
