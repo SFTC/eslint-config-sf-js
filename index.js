@@ -1,5 +1,3 @@
-const abc = 'xxx';
-
 module.exports = {
   extends: ['airbnb-base'],
   parserOptions: {
@@ -33,6 +31,13 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 1,
     'no-alert': process.env.NODE_ENV === 'production' ? 2 : 1,
+
+    // 开发环境允许未使用的变量
+    'no-unused-vars': [process.env.NODE_ENV === 'production' ? 'error' : 'warn', {
+      vars: 'all',
+      args: 'after-used',
+      ignoreRestSiblings: true,
+    }],
 
     // 有时需要循环中重试请求，这种场景下可以使用await
     'no-await-in-loop': 'off',
