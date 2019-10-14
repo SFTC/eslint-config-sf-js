@@ -1,4 +1,3 @@
-
 module.exports = {
   extends: ['airbnb-base'],
   parserOptions: {
@@ -12,8 +11,8 @@ module.exports = {
     },
     // 即使没有 babelrc 配置文件，也使用 babel-eslint 来解析
     requireConfigFile: false,
-    // 仅允许 import export 语句出现在模块的顶层
-    allowImportExportEverywhere: false,
+    // false时仅允许 import export 语句出现在模块的顶层
+    allowImportExportEverywhere: true,
   },
   env: {
     browser: true,
@@ -21,11 +20,24 @@ module.exports = {
     commonjs: true,
     es6: true,
   },
+
+  /**
+   * airbnb-base 规则
+   * https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js
+   */
+
   rules: {
     // 打包时禁用
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 1,
     'no-alert': process.env.NODE_ENV === 'production' ? 2 : 1,
+
+    // 开发环境允许未使用的变量
+    'no-unused-vars': [process.env.NODE_ENV === 'production' ? 'error' : 'warn', {
+      vars: 'all',
+      args: 'after-used',
+      ignoreRestSiblings: true,
+    }],
 
     // 有时需要循环中重试请求，这种场景下可以使用await
     'no-await-in-loop': 'off',
